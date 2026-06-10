@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蔡建緯 Tsai Jian-Wei · 長笛演奏家</title>
+<meta name="description" content="蔡建緯，台灣長笛演奏家，德國國立特羅辛根高等音樂院最高演奏文憑（Konzertexamen）畢業。">
+<meta name="keywords" content="蔡建緯, Tsai Jian-Wei, 長笛, 長笛家, 長笛教學, Konzertexamen, Trossingen, 台灣, 古典音樂">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #c8b88a;
+    --gold-dim: #9a8a6a;
+    --gold-faint: #3a3020;
+    --bg: #0a0a0a;
+    --bg2: #111010;
+    --bg3: #161412;
+    --text: #e8e4dc;
+    --text-muted: #7a7068;
+    --text-dim: #4a4540;
+    --border: rgba(200,184,138,0.12);
+    --border-light: rgba(200,184,138,0.06);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 60px;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border-light);
+  }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.25s;
+    font-weight: 400;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .nav-toggle span {
+    width: 22px;
+    height: 1px;
+    background: var(--gold-dim);
+    display: block;
+    transition: all 0.3s;
+  }
+
+  #home {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 60px;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px;
+    position: relative;
+  }
+
+  .hero-left::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 15%; bottom: 15%;
+    width: 0.5px;
+    background: linear-gradient(to bottom, transparent, var(--border), transparent);
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--gold-dim);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  .hero-name-zh {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1;
+    color: #f0ebe0;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .hero-name-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+
+  .hero-rule {
+    width: 48px;
+    height: 0.5px;
+    background: var(--gold);
+    opacity: 0.5;
+    margin-bottom: 28px;
+  }
+
+  .hero-desc {
+    font-size: 13px;
+    line-height: 2.2;
+    color: var(--text-muted);
+    max-width: 380px;
+    font-weight: 300;
+  }
+
+  .hero-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .hero-tag {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    border: 0.5px solid var(--border);
+    color: var(--text-dim);
+    padding: 5px 12px;
+    border-radius: 2px;
+    font-weight: 400;
+  }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+    background: #0f0e0d;
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(15%) contrast(1.05);
+    display: block;
+  }
+
+  .hero-right::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(10,10,10,0.5) 0%, transparent 30%),
+                linear-gradient(to top, rgba(10,10,10,0.6) 0%, transparent 40%);
+  }
+
+  section {
+    padding: 96px 60px;
+    border-top: 0.5px solid var(--border-light);
+  }
+
+  .section-header { margin-bottom: 56px; }
+
+  .section-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: #f0ebe0;
+    line-height: 1.25;
+  }
+
+  .section-rule {
+    width: 40px;
+    height: 0.5px;
+    background: var(--gold);
+    opacity: 0.5;
+    margin-top: 20px;
+  }
+
+  #about .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-body {
+    font-size: 14px;
+    line-height: 2.1;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+
+  .about-body p { margin-bottom: 20px; }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .stat-item {
+    padding: 28px 24px;
+    border: 0.5px solid var(--border-light);
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  #performances { background: var(--bg2); }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border-light);
+  }
+
+  .video-card {
+    background: var(--bg);
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: block;
+  }
+
+  .video-card:hover { background: var(--bg3); }
+
+  .video-thumb {
+    aspect-ratio: 16/9;
+    background: var(--bg3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+  }
+
+  .video-card:hover .video-thumb img { transform: scale(1.03); }
+
+  .play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10,10,10,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .video-card:hover .play-overlay { opacity: 1; }
+
+  .play-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(200,184,138,0.7);
+    background: rgba(10,10,10,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play-triangle {
+    width: 0; height: 0;
+    border-left: 14px solid var(--gold);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    margin-left: 3px;
+  }
+
+  .video-info { padding: 16px 20px 20px; }
+
+  .video-title {
+    font-size: 13px;
+    color: #d8d0c4;
+    margin-bottom: 6px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .video-meta {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .video-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #141210;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-placeholder-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-placeholder-tri {
+    width: 0; height: 0;
+    border-left: 11px solid var(--gold-faint);
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    margin-left: 2px;
+  }
+
+  .more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--gold-dim);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--border);
+    padding-bottom: 4px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .more-link:hover { color: var(--gold); border-color: var(--gold); }
+
+  #cv .cv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  .cv-group-title {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--gold-dim);
+    margin-bottom: 32px;
+    font-weight: 400;
+  }
+
+  .cv-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0 20px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 0.5px solid var(--border-light);
+  }
+
+  .cv-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .cv-year {
+    font-size: 11px;
+    color: var(--gold-dim);
+    letter-spacing: 0.05em;
+    padding-top: 3px;
+    font-weight: 400;
+  }
+
+  .cv-title {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 5px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .cv-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .cv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 48px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    text-decoration: none;
+    border: 0.5px solid var(--border);
+    padding: 12px 24px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .cv-download:hover { color: var(--gold); border-color: var(--gold); }
+
+  #contact { background: var(--bg2); }
+
+  #contact .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-intro {
+    font-size: 26px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    color: #c8c0b0;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .contact-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 2.1;
+    font-weight: 300;
+  }
+
+  .contact-items { margin-top: 8px; }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 0.5px solid var(--border-light);
+  }
+
+  .contact-item:last-child { border-bottom: none; }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    border: 0.5px solid var(--border);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--gold-dim);
+    font-size: 15px;
+  }
+
+  .contact-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+    font-weight: 400;
+  }
+
+  .contact-value {
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 300;
+  }
+
+  .social-bar {
+    display: flex;
+    gap: 10px;
+    margin-top: 36px;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid var(--border);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s;
+    font-size: 16px;
+  }
+
+  .social-btn:hover { color: var(--gold); border-color: var(--gold); }
+
+  footer {
+    padding: 28px 60px;
+    border-top: 0.5px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--text-dim);
+    font-weight: 300;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: rgba(10,10,10,0.98); padding: 24px; gap: 20px; border-bottom: 0.5px solid var(--border-light); }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    #home { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 80px 24px 48px; }
+    .hero-left::after { display: none; }
+    .hero-name-zh { font-size: 52px; }
+    .hero-name-en { font-size: 32px; }
+    .hero-right { height: 60vw; }
+    section { padding: 64px 24px; }
+    #about .about-grid, #cv .cv-grid, #contact .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .video-grid { grid-template-columns: 1fr 1fr; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+    footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .video-grid { grid-template-columns: 1fr; }
+    .hero-name-zh { font-size: 40px; }
+    .hero-name-en { font-size: 26px; }
+    .about-stats { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#home" class="nav-brand">蔡建緯</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">關於我</a></li>
+    <li><a href="#performances">演出作品</a></li>
+    <li><a href="#cv">學經歷</a></li>
+    <li><a href="#contact">聯絡</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="開啟選單">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section id="home">
+  <div class="hero-left">
+    <p class="hero-eyebrow">長笛演奏家 · 最高演奏文憑 Konzertexamen</p>
+    <h1 class="hero-name-zh">蔡建緯</h1>
+    <p class="hero-name-en">Tsai Jian-Wei</p>
+    <div class="hero-rule"></div>
+    <p class="hero-desc">
+      德國國立特羅辛根高等音樂院<br>
+      最高演奏文憑（Konzertexamen）畢業<br>
+      現旅居台灣，從事演奏與教學
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">獨奏演出</span>
+      <span class="hero-tag">室內樂</span>
+      <span class="hero-tag">長笛教學</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="prof_pic.jpg" alt="蔡建緯 · 長笛演奏家">
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-header">
+    <p class="section-eyebrow">關於我</p>
+    <h2 class="section-title">以音樂連結<br>東西方世界</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="about-grid">
+    <div>
+      <div class="about-body">
+        <p>
+          蔡建緯旅居德國近七年，就讀於德國國立特羅辛根高等音樂院
+          （Staatliche Hochschule für Musik Trossingen），
+          以最高演奏文憑 Konzertexamen 畢業。此文憑為德國音樂教育體系中的最高學術成就，相當於博士學位。
+        </p>
+        <p>
+          深浸於歐洲古典音樂傳統的薰陶之中，他的演奏藝術在德國音樂學院嚴謹的訓練體系下逐步成形。
+          學成歸國後，積極活躍於台灣音樂演出舞台，同時投入長笛教學，
+          將德國音樂學院的深厚底蘊帶回台灣，持續推廣古典音樂文化。
+        </p>
+        <p>
+          無論是獨奏音樂會、室內樂演出，或是個人教學與大師班，
+          蔡建緯始終以對音樂的熱情與嚴謹的態度，為每一位聽眾與學生帶來最深刻的音樂體驗。
+        </p>
+      </div>
+    </div>
+    <div class="about-stats">
+      <div class="stat-item">
+        <div class="stat-num">7</div>
+        <div class="stat-label">旅居德國<br>研習年數</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">KE</div>
+        <div class="stat-label">Konzertexamen<br>最高演奏文憑</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">獨奏</div>
+        <div class="stat-label">獨奏與室內樂<br>演出經歷</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">台灣</div>
+        <div class="stat-label">現居地<br>持續演出中</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="performances">
+  <div class="section-header">
+    <p class="section-eyebrow">演出作品</p>
+    <h2 class="section-title">精選演出<br>與影音紀錄</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="video-grid" id="videoGrid">
+    <a class="video-card" href="https://www.youtube.com/@a82718g" target="_blank" rel="noopener">
+      <div class="video-thumb">
+        <div class="video-placeholder">
+          <div class="video-placeholder-icon">
+            <div class="video-placeholder-tri"></div>
+          </div>
+        </div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">前往 YouTube 頻道觀看所有演出影片</p>
+        <p class="video-meta">youtube.com/@a82718g</p>
+      </div>
+    </a>
+  </div>
+
+  <a href="https://www.youtube.com/@a82718g" target="_blank" rel="noopener" class="more-link">
+    前往 YouTube 頻道觀看更多演出 &nbsp;→
+  </a>
+</section>
+
+<section id="cv">
+  <div class="section-header">
+    <p class="section-eyebrow">學經歷</p>
+    <h2 class="section-title">學歷與<br>現職經歷</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="cv-grid">
+    <div>
+      <p class="cv-group-title">學歷</p>
+      <div class="cv-item">
+        <span class="cv-year">2017–2024</span>
+        <div>
+          <p class="cv-title">最高演奏文憑 Konzertexamen</p>
+          <p class="cv-sub">
+            德國國立特羅辛根高等音樂院<br>
+            Staatliche Hochschule für Musik Trossingen<br>
+            德國特羅辛根
+          </p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-year">之前</span>
+        <div>
+          <p class="cv-title">音樂學習歷程</p>
+          <p class="cv-sub">台灣</p>
+        </div>
+      </div>
+      <a href="#" class="cv-download">↓ &nbsp; 下載完整履歷（PDF）</a>
+    </div>
+    <div>
+      <p class="cv-group-title">現職</p>
+      <div class="cv-item">
+        <span class="cv-year">現在</span>
+        <div>
+          <p class="cv-title">獨奏與室內樂演奏家</p>
+          <p class="cv-sub">
+            活躍於台灣各地音樂廳與演出場館<br>
+            接受國內外演出邀約
+          </p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-year">現在</span>
+        <div>
+          <p class="cv-title">長笛教師</p>
+          <p class="cv-sub">
+            個人長笛教學工作室<br>
+            歡迎各程度學生，從入門到進階
+          </p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-year">隨時</span>
+        <div>
+          <p class="cv-title">大師班與工作坊</p>
+          <p class="cv-sub">
+            歡迎各單位邀約<br>
+            可至學校、音樂機構或私人課程舉辦
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-header">
+    <p class="section-eyebrow">聯絡</p>
+    <h2 class="section-title">讓我們一起<br>創造音樂</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <p class="contact-intro">「歡迎演出邀約、教學合作與大師班邀請。」</p>
+      <p class="contact-note">
+        無論是音樂會演出、長笛教學，或是大師班邀請，
+        歡迎透過電子郵件與我聯絡。<br><br>
+        我會在 2–3 個工作天內回覆您的訊息。
+      </p>
+      <div class="social-bar">
+        <a href="https://www.youtube.com/@a82718g" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube 頻道">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42C1 8.14 1 12 1 12s0 3.86.46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95C23 15.86 23 12 23 12s0-3.86-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/蔡建緯" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="contact-items">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <p class="contact-label">電子郵件</p>
+          <p class="contact-value">a82718g@yahoo.com.tw</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <p class="contact-label">所在地</p>
+          <p class="contact-value">台灣</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <p class="contact-label">回覆時間</p>
+          <p class="contact-value">2–3 個工作天內回覆</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-copy">© 2025 蔡建緯 Tsai Jian-Wei · 版權所有</span>
+  <span class="footer-brand">蔡建緯</span>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>

@@ -2,33 +2,28 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Flutist · Konzertexamen · <a href="https://www.hfm-trossingen.de">Staatliche Hochschule für Musik Trossingen</a>
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Taiwan</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+news: false
+selected_papers: false
+social: true
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Tsai Jian-Wei is a Taiwanese flutist based in Taiwan, having spent nearly seven years in Germany pursuing advanced musical studies at the Staatliche Hochschule für Musik Trossingen, one of Germany's most prestigious music conservatories. He graduated with the Konzertexamen — the highest performance diploma in the German music education system, equivalent to a doctoral degree.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+His musical training was deeply rooted in the rich European classical tradition, shaped by years of immersive study and performance experience in Germany. Since returning to Taiwan, Jian-Wei has been actively engaged in both performance and teaching, bringing the depth of his German conservatory training to Taiwanese audiences and students.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+He performs regularly as a soloist and chamber musician, and is dedicated to music education, nurturing the next generation of flutists with the same passion and discipline that defined his own training abroad.
+
+---
+
+蔡建緯是一位來自台灣的長笛演奏家。他旅居德國近七年，就讀於德國國立特羅辛根高等音樂院，並以最高演奏文憑（Konzertexamen）畢業，此學位相當於博士層級，是德國音樂教育體系中的最高學術成就。
+
+學成歸國後，蔡建緯活躍於台灣音樂舞台，同時投入演奏與教學工作，將德國音樂學院的深厚訓練帶回台灣，持續推廣古典音樂文化。
